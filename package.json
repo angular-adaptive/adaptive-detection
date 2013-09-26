@@ -1,0 +1,20 @@
+{
+  "name": "angular-adaptive-detection",
+  "version": "0.1.0",
+  "description": "This module allows you to detect device.",
+  "author": "https://github.com/angular-adaptive/adaptive-detection/graphs/contributors",
+  "license": "MIT",
+  "homepage": "http://angular-adaptive.github.io",
+  "main": "./src/adaptive-detection.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-karma": "*",
+    "grunt-contrib-jshint": "~0.2.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular-adaptive/adaptive-detection.git"
+  }
+}
