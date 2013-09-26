@@ -21,7 +21,7 @@ To your `bower.json` file. Then run
 This will copy the angular-isbn files into your `bower_components` folder, along with its dependencies. Load the script files in your application:
 
     <script type="text/javascript" src="components/angular/angular.js"></script>
-    <script type="text/javascript" src="components/angular-adaptive/adaptive-detection/src/adaptive-detection.js"></script>
+    <script type="text/javascript" src="components/angular-adaptive-detection/src/adaptive-detection.js"></script>
 
 Add the **adaptive.detection** module as a dependency to your application module:
 
