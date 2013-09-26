@@ -53,8 +53,6 @@ Contributions are welcome. Please make a pull request against canary branch and 
 
 # Testing
 
-More tests will be added...
-
 We use karma and jshint to ensure the quality of the code. The easiest way to run these checks is to use grunt:
 
     npm install -g grunt-cli
