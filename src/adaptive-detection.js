@@ -1,5 +1,5 @@
 /**
- * angular-adaptive-detection v0.1.0
+ * angular-adaptive-detection v0.1.1
  * The MIT License
  * Copyright (c) 2013 Jan Antala
  */

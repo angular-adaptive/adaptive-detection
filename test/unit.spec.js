@@ -1,26 +1,78 @@
 
 describe('adaptive.detection', function(){
  
-  var detection;
+  describe('provider functionality', function() {
 
-  beforeEach(module('adaptive.detection', function($detectionProvider) {
+    var detection;
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
       detection = $detectionProvider;
-  }));
- 
-  it('should allow to set custom userAgent', inject(function() {
-    detection.setUserAgent('angular');
-    expect(detection.userAgent).toEqual('angular');
-    expect(detection.$get().getUserAgent()).toEqual('angular');
-  }));
+    }));
 
-  it('should detect iOS', inject(function() {
-    detection.setUserAgent('iPhone');
-    expect(detection.$get().isiOS()).toEqual(true);
-  }));
+    it('should be defined', inject(function() {
+      expect(detection).toBeDefined();
+    }));
 
-  it('should detect Android', inject(function() {
-    detection.setUserAgent('Android');
-    expect(detection.$get().isAndroid()).toEqual(true);
-  }));
-  
+    it('should have setUserAgent method', inject(function() {
+      expect(detection.setUserAgent).toBeDefined();
+      expect(typeof detection.setUserAgent).toBe('function');
+    }));
+
+    it('should have $get method', inject(function() {
+      expect(detection.$get).toBeDefined();
+      expect(typeof detection.$get).toBe('function');
+    }));
+  });
+
+  describe('provider public methods', function() {
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
+      $detectionProvider.setUserAgent('angular');
+    }));
+
+    it('should be defined', inject(function($detection) {
+      expect($detection).toBeDefined();
+    }));
+
+    it('should have public methods', inject(function($detection) {
+      expect($detection.getUserAgent).toBeDefined();
+      expect($detection.isiOS).toBeDefined();
+      expect($detection.isAndroid).toBeDefined();
+
+      expect(typeof $detection.getUserAgent).toBe('function');
+      expect(typeof $detection.isiOS).toBe('function');
+      expect(typeof $detection.isAndroid).toBe('function');
+    }));
+
+    it('should detect angular browser', inject(function($detection) {
+      expect($detection.getUserAgent()).toEqual('angular');
+      expect($detection.isAndroid()).toEqual(false);
+      expect($detection.isiOS()).toEqual(false);
+    }));
+  });
+
+  describe('test Android', function() {
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
+      $detectionProvider.setUserAgent('Android');
+    }));
+
+    it('should detect Android browser', inject(function($detection) {
+      expect($detection.isAndroid()).toEqual(true);
+      expect($detection.isiOS()).toEqual(false);
+    }));
+  });
+
+  describe('test iOS', function() {
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
+      $detectionProvider.setUserAgent('iPhone');
+    }));
+
+    it('should detect iOS browser', inject(function($detection) {
+      expect($detection.isAndroid()).toEqual(false);
+      expect($detection.isiOS()).toEqual(true);
+    }));
+  });
+
 });
