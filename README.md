@@ -37,7 +37,7 @@ and include $detection provider as a dependency to your controller:
 
 You can configure provider to a custom User Agent string in app configuration.
 
-    $detection.setUserAgent('angular browser');
+    $detectionProvider.setUserAgent('angular browser');
 
 ### Public methods
 
