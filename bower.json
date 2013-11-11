@@ -5,7 +5,7 @@
   "author": "https://github.com/angular-adaptive/adaptive-detection/graphs/contributors",
   "license": "MIT",
   "homepage": "http://angular-adaptive.github.io",
-  "main": "./src/adaptive-detection.js",
+  "main": "./angular-adaptive-detection.js",
   "ignore": [
     "**/.*",
     "node_modules",
