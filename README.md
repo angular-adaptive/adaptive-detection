@@ -21,7 +21,7 @@ To your `bower.json` file. Then run
 This will copy the angular-isbn files into your `bower_components` folder, along with its dependencies. Load the script files in your application:
 
     <script type="text/javascript" src="components/angular/angular.js"></script>
-    <script type="text/javascript" src="components/angular-adaptive-detection/src/adaptive-detection.js"></script>
+    <script type="text/javascript" src="components/angular-adaptive-detection/angular-adaptive-detection.js"></script>
 
 Add the **adaptive.detection** module as a dependency to your application module:
 
@@ -66,4 +66,4 @@ The karma task will try to open Chrome as a browser in which to run the tests. M
 
 The MIT License
 
-Copyright (c) 2013 Jan Antala, https://github.com/janantala
+Copyright (c) 2013 Jan Antala, http://janantala.com
