@@ -4,7 +4,7 @@ module.exports = function(config) {
     files: [
       'components/angular/angular.js',
       'components/angular-mocks/angular-mocks.js',
-      'src/adaptive-detection.js',
+      'src/angular-adaptive-detection.js',
       'test/*.spec.js'
     ],
     frameworks: ['jasmine'],
