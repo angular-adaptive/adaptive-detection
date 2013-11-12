@@ -6,9 +6,9 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['karma', 'jshint', 'concat', 'uglify']);
 
   var karmaConfig = function(configFile, customOptions) {
-      var options = { configFile: configFile, keepalive: true };
-      var travisOptions = process.env.TRAVIS && { browsers: ['Firefox'], reporters: 'dots' };
-      return grunt.util._.extend(options, customOptions, travisOptions);
+    var options = { configFile: configFile, keepalive: true };
+    var travisOptions = process.env.TRAVIS && { browsers: ['Firefox'], reporters: 'dots' };
+    return grunt.util._.extend(options, customOptions, travisOptions);
   };
 
   // Project configuration.
@@ -53,16 +53,10 @@ module.exports = function (grunt) {
         globals:{}
       }
     },
-    ngmin: {
-      dist: {
-        src: '<%= pkg.name %>.js',
-        dest: '<%= pkg.name %>.js'
-      }
-    },
     changelog: {
       options: {
         dest: 'CHANGELOG.md'
       }
     },
-});
+  });
 };
