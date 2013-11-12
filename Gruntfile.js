@@ -58,6 +58,11 @@ module.exports = function (grunt) {
         src: '<%= pkg.name %>.js',
         dest: '<%= pkg.name %>.js'
       }
-    }
+    },
+    changelog: {
+      options: {
+        dest: 'CHANGELOG.md'
+      }
+    },
 });
 };
