@@ -6,14 +6,21 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['karma', 'jshint', 'concat', 'uglify']);
 
   var karmaConfig = function(configFile, customOptions) {
-      var options = { configFile: configFile, keepalive: true };
-      var travisOptions = process.env.TRAVIS && { browsers: ['Firefox'], reporters: 'dots' };
-      return grunt.util._.extend(options, customOptions, travisOptions);
+    var options = { configFile: configFile, keepalive: true };
+    var travisOptions = process.env.TRAVIS && { browsers: ['Firefox'], reporters: 'dots' };
+    return grunt.util._.extend(options, customOptions, travisOptions);
   };
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('bower.json'),
+    meta: {
+      banner: '/*!\n' +
+        ' * <%= pkg.name %> v<%= pkg.version %>\n' +
+        ' * The MIT License\n' +
+        ' * Copyright (c) 2013 Jan Antala\n' +
+        ' */'
+    },
     uglify: {
       options: {
         preserveComments: 'some'
@@ -25,7 +32,8 @@ module.exports = function (grunt) {
     },
     concat: {
       options: {
-        process: true
+        process: true,
+        banner: '<%= meta.banner %>\n\n'
       },
       dist: {
         src: 'src/<%= pkg.name %>.js',
@@ -33,7 +41,7 @@ module.exports = function (grunt) {
       }
     },
     karma: {
-        unit: {
+      unit: {
         options: karmaConfig('test/test.conf.js')
       }
     },
@@ -53,11 +61,10 @@ module.exports = function (grunt) {
         globals:{}
       }
     },
-    ngmin: {
-      dist: {
-        src: '<%= pkg.name %>.js',
-        dest: '<%= pkg.name %>.js'
+    changelog: {
+      options: {
+        dest: 'CHANGELOG.md'
       }
-    }
-});
+    },
+  });
 };
