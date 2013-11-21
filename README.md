@@ -9,43 +9,43 @@ This module allows you to detect iOS and Android devices using user agent string
 # Usage
 
 We use [bower](http://twitter.github.com/bower/) for dependency management. Add
-
-    dependencies: {
-        "angular-adaptive-detection": "latest"
-    }
-
+```json
+"dependencies": {
+    "angular-adaptive-detection": "latest"
+}
+```
 To your `bower.json` file. Then run
 
     bower install
 
 This will copy the angular-adaptive-detection files into your `bower_components` folder, along with its dependencies. Load the script files in your application:
-
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-adaptive-detection/angular-adaptive-detection.min.js"></script>
-
+```html
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-adaptive-detection/angular-adaptive-detection.min.js"></script>
+```
 Add the **adaptive.detection** module as a dependency to your application module:
-
-    var myAppModule = angular.module('MyApp', ['adaptive.detection']);
-
+```js
+var myAppModule = angular.module('MyApp', ['adaptive.detection']);
+```
 and include $detection provider as a dependency to your controller:
+```js
+angular.module('MyApp').controller('MainCtrl', function ['$scope', '$detection', ($scope, $detection) {
 
-    angular.module('MyApp').controller('MainCtrl', function ['$scope', '$detection', ($scope, $detection) {
-
-    }]);
-
+}]);
+```
 ### Configuration
 
 You can configure provider to a custom User Agent string in app configuration.
-
-    $detectionProvider.setUserAgent('angular browser');
-
+```js
+$detectionProvider.setUserAgent('angular browser');
+```
 ### Public methods
 
 You can detect Android and iOS devices using:
-
-    $detection.isAndroid();
-    $detection.isiOS();
-
+```js
+$detection.isAndroid();
+$detection.isiOS();
+```
     
 # Contributing
 
