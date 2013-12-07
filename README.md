@@ -2,6 +2,10 @@
 
 This module allows you to detect iOS and Android devices using user agent string
 
+### Demo
+
+Check out http://www.janantala.com/slides/how-to-build-an-open-source-angularjs-module/#/7/4
+
 # Requirements
 
 - AngularJS v 1.0+
