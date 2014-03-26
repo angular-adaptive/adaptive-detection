@@ -1,6 +1,6 @@
 # adaptive-detection v0.3.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
 
-This module allows you to detect iOS and Android devices using user agent string
+This module allows you to detect iOS, Android and Windows Phone devices using user agent string
 
 ### Demo
 
@@ -8,7 +8,7 @@ Check out http://www.janantala.com/slides/how-to-build-an-open-source-angularjs-
 
 # Requirements
 
-- AngularJS v 1.0+
+- AngularJS v 1.2.x+
 
 # Usage
 
@@ -49,6 +49,7 @@ You can detect Android and iOS devices using:
 
     $detection.isAndroid();
     $detection.isiOS();
+    $detection.isWindowsPhone();
 
     
 # Contributing
