@@ -1,4 +1,4 @@
-# adaptive-detection v0.2.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
+# adaptive-detection v0.3.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
 
 This module allows you to detect iOS and Android devices using user agent string
 
@@ -70,4 +70,4 @@ The karma task will try to open Chrome as a browser in which to run the tests. M
 
 The MIT License
 
-Copyright (c) 2013 [Jan Antala](http://www.janantala.com)
+Copyright (c) 2014 [Jan Antala](http://www.janantala.com)
