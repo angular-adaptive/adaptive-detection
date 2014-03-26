@@ -1,6 +1,6 @@
-# adaptive-detection v0.2.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
+# adaptive-detection v0.3.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
 
-This module allows you to detect iOS and Android devices using user agent string
+This module allows you to detect iOS, Android and Windows Phone devices using user agent string
 
 ### Demo
 
@@ -8,7 +8,7 @@ Check out http://www.janantala.com/slides/how-to-build-an-open-source-angularjs-
 
 # Requirements
 
-- AngularJS v 1.0+
+- AngularJS v 1.2.x+
 
 # Usage
 
@@ -47,8 +47,9 @@ $detectionProvider.setUserAgent('angular browser');
 
 You can detect Android and iOS devices using:
 ```js
-$detection.isAndroid();
-$detection.isiOS();
+    $detection.isAndroid();
+    $detection.isiOS();
+    $detection.isWindowsPhone();
 ```
     
 # Contributing
@@ -70,4 +71,4 @@ The karma task will try to open Chrome as a browser in which to run the tests. M
 
 The MIT License
 
-Copyright (c) 2013 [Jan Antala](http://www.janantala.com)
+Copyright (c) 2014 [Jan Antala](http://www.janantala.com)

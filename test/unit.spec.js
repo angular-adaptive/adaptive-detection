@@ -60,6 +60,7 @@ describe('adaptive.detection', function(){
     it('should detect Android browser', inject(function($detection) {
       expect($detection.isAndroid()).toEqual(true);
       expect($detection.isiOS()).toEqual(false);
+      expect($detection.isWindowsPhone()).toEqual(false);
     }));
   });
 
@@ -72,6 +73,20 @@ describe('adaptive.detection', function(){
     it('should detect iOS browser', inject(function($detection) {
       expect($detection.isAndroid()).toEqual(false);
       expect($detection.isiOS()).toEqual(true);
+      expect($detection.isWindowsPhone()).toEqual(false);
+    }));
+  });
+
+  describe('test Windows Phone', function() {
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
+      $detectionProvider.setUserAgent('Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)');
+    }));
+
+    it('should detect Internet Explorer browser', inject(function($detection) {
+      expect($detection.isAndroid()).toEqual(false);
+      expect($detection.isiOS()).toEqual(false);
+      expect($detection.isWindowsPhone()).toEqual(true);
     }));
   });
 

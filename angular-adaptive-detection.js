@@ -1,7 +1,7 @@
 /*!
- * angular-adaptive-detection v0.2.0
+ * angular-adaptive-detection v0.3.0
  * The MIT License
- * Copyright (c) 2013 Jan Antala
+ * Copyright (c) 2014 Jan Antala
  */
 
 (function () {
@@ -105,6 +105,19 @@ adaptive.provider('$detection', [function() {
        */
       isAndroid: function(){
         return (/(Android)/gi).test(userAgent);
+      },
+      /**
+       * @ngdoc function
+       * @name adaptive.detection.$detection#isWindowsPhone
+       * @methodOf adaptive.detection.$detection
+       *
+       * @description
+       * Returns true if current device is a Windows Phone device.
+       *
+       * @return {bool}
+       */
+      isWindowsPhone: function(){
+        return (/(IEMobile)/gi).test(userAgent);
       }
     };
   };

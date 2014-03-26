@@ -99,6 +99,19 @@ adaptive.provider('$detection', [function() {
        */
       isAndroid: function(){
         return (/(Android)/gi).test(userAgent);
+      },
+      /**
+       * @ngdoc function
+       * @name adaptive.detection.$detection#isWindowsPhone
+       * @methodOf adaptive.detection.$detection
+       *
+       * @description
+       * Returns true if current device is a Windows Phone device.
+       *
+       * @return {bool}
+       */
+      isWindowsPhone: function(){
+        return (/(IEMobile)/gi).test(userAgent);
       }
     };
   };
