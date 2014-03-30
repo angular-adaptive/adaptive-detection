@@ -1,5 +1,7 @@
 (function () {
 
+'use strict';
+
 /**
  * @ngdoc overview
  * @name adaptive.detection
