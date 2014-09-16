@@ -1,6 +1,6 @@
 # adaptive-detection v0.3.0 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
 
-This module allows you to detect iOS, Android and Windows Phone devices using user agent string
+This module allows you to detect iOS, Android, Windows Phone and BlackBerry 10 devices using user agent string
 
 ### Demo
 
@@ -45,11 +45,12 @@ You can configure provider to a custom User Agent string in app configuration.
 
 ### Public methods
 
-You can detect Android and iOS devices using:
+You can detect Android, iOS, Windows Phone and BlackBerry 10 devices using:
 
     $detection.isAndroid();
     $detection.isiOS();
     $detection.isWindowsPhone();
+    $detection.isBB10();
 
     
 # Contributing
