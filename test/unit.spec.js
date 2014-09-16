@@ -38,16 +38,22 @@ describe('adaptive.detection', function(){
       expect($detection.getUserAgent).toBeDefined();
       expect($detection.isiOS).toBeDefined();
       expect($detection.isAndroid).toBeDefined();
+      expect($detection.isWindowsPhone).toBeDefined();
+      expect($detection.isBB10).toBeDefined();
 
       expect(typeof $detection.getUserAgent).toBe('function');
       expect(typeof $detection.isiOS).toBe('function');
       expect(typeof $detection.isAndroid).toBe('function');
+      expect(typeof $detection.isWindowsPhone).toBe('function');
+      expect(typeof $detection.isBB10).toBe('function');
     }));
 
     it('should detect angular browser', inject(function($detection) {
       expect($detection.getUserAgent()).toEqual('angular');
       expect($detection.isAndroid()).toEqual(false);
       expect($detection.isiOS()).toEqual(false);
+      expect($detection.isWindowsPhone()).toEqual(false);
+      expect($detection.isBB10()).toEqual(false);
     }));
   });
 
@@ -61,6 +67,7 @@ describe('adaptive.detection', function(){
       expect($detection.isAndroid()).toEqual(true);
       expect($detection.isiOS()).toEqual(false);
       expect($detection.isWindowsPhone()).toEqual(false);
+      expect($detection.isBB10()).toEqual(false);
     }));
   });
 
@@ -74,6 +81,7 @@ describe('adaptive.detection', function(){
       expect($detection.isAndroid()).toEqual(false);
       expect($detection.isiOS()).toEqual(true);
       expect($detection.isWindowsPhone()).toEqual(false);
+      expect($detection.isBB10()).toEqual(false);
     }));
   });
 
@@ -87,6 +95,21 @@ describe('adaptive.detection', function(){
       expect($detection.isAndroid()).toEqual(false);
       expect($detection.isiOS()).toEqual(false);
       expect($detection.isWindowsPhone()).toEqual(true);
+      expect($detection.isBB10()).toEqual(false);
+    }));
+  });
+
+  describe('test BlackBerry 10', function() {
+
+    beforeEach(module('adaptive.detection', function($detectionProvider) {
+      $detectionProvider.setUserAgent('Mozilla/5.0 (BB10; <Device Model>) AppleWebKit/<WebKit Version> (KHTML, like Gecko) Version/<BB Version #> Mobile Safari/<WebKit Version>');
+    }));
+
+    it('should detect BlackBerry 10 browser', inject(function($detection) {
+      expect($detection.isAndroid()).toEqual(false);
+      expect($detection.isiOS()).toEqual(false);
+      expect($detection.isWindowsPhone()).toEqual(false);
+      expect($detection.isBB10()).toEqual(true);
     }));
   });
 

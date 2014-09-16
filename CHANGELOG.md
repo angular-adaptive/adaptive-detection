@@ -1,3 +1,12 @@
+## 0.4.0 (2014-09-16)
+
+
+#### Features
+
+* use conventional-changelog ([7fbb3ca2](https://github.com/angular-adaptive/adaptive-detection.git/commit/7fbb3ca20542355f634c287b96b6ed8277763224))
+* add BlackBerry 10 detection ([898c112b](https://github.com/angular-adaptive/adaptive-detection.git/commit/898c112bf790e771346a496a36c5f57647b2fe04))
+
+
 <a name="0.3.0"></a>
 ## 0.3.0 (2014-03-30)
 

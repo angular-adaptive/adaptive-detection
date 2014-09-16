@@ -113,6 +113,19 @@ adaptive.provider('$detection', [function() {
        */
       isWindowsPhone: function(){
         return (/(IEMobile)/gi).test(userAgent);
+      },
+      /**
+       * @ngdoc function
+       * @name adaptive.detection.$detection#isBB10
+       * @methodOf adaptive.detection.$detection
+       *
+       * @description
+       * Returns true if current device is a BlackBerry 10 device.
+       *
+       * @return {bool}
+       */
+      isBB10: function(){
+        return (/(BB10)/gi).test(userAgent);
       }
     };
   };
