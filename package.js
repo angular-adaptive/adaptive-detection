@@ -5,7 +5,7 @@ Package.describe({
   summary: "This module allows you to detect device.",
   version: "0.4.1",
   git: "https://github.com/netanelgilad/meteor-textAngular.git",
-  name: "davidyaha:adaptive-detection"
+  name: "angular-adaptive:adaptive-detection"
 });
 
 Package.onUse(function(api) {
@@ -17,6 +17,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('davidyaha:adaptive-detection', 'client');
+  api.use('angular-adaptive:adaptive-detection', 'client');
   //api.addFiles('angular-adaptive:adaptive-detection-tests.js', 'client');
 });
