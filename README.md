@@ -1,3 +1,7 @@
+# This repository is deprecated!
+
+---
+
 # adaptive-detection v0.4.1 [![Build Status](https://travis-ci.org/angular-adaptive/adaptive-detection.png?branch=master)](https://travis-ci.org/angular-adaptive/adaptive-detection)
 
 This module allows you to detect iOS, Android, Windows Phone and BlackBerry 10 devices using user agent string
